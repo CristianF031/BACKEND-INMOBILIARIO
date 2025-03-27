@@ -6,28 +6,23 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "estados_contrato")
-public class EstadoContrato {
 
+public class EstadoContrato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_persona")
-    private Integer idPersona;
+    @Column (name = "id_estado_contrato", nullable = false, length =30)
+    private Integer idEstadoContrato;
 
-    @Column (name ="nombre", nullable = false, length = 100)
-    private String nombre;
 
-    @Column (name ="idEstadoContrato", nullable = false, length = 100)
-    private String idEstadoContrato;
-
-    @Column (name ="descripcion", nullable = false, length = 100)
+    @Column (name = "descripcion")
     private String descripcion;
 
-    }
-
+    @Column (name = "nombre", nullable = false, length =30)
+    private String nombre;
+}

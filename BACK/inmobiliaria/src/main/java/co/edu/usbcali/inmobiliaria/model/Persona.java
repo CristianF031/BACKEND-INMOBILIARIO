@@ -41,21 +41,6 @@ public class Persona {
     @Column (name ="codigopostal", nullable = false, length = 50)
     private String codigopostal;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

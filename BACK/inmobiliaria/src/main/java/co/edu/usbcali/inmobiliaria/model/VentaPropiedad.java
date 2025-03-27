@@ -18,17 +18,17 @@ public class VentaPropiedad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_venta")
-    private Integer idVenta;
+    @Column(name = "Id_venta")
+    private Integer IdVenta;
 
-    @Column(name = "fecha_venta")
-    private LocalDate fechaVenta;
+    @Column(name = "Fecha_venta")
+    private LocalDate FechaVenta;
 
-    @Column(name = "precio_venta", precision = 12, scale = 2)
-    private BigDecimal precioVenta;
+    @Column(name = "Precio_venta", precision = 12, scale = 2)
+    private BigDecimal PrecioVenta;
 
-    @Column(name = "comision_asesor", precision = 10, scale = 2)
-    private BigDecimal comisionAsesor;
+    @Column(name = "Comision_asesor", precision = 10, scale = 2)
+    private BigDecimal ComisionAsesor;
 
     @ManyToOne
     @JoinColumn(name = "id_propiedad", referencedColumnName = "id_propiedad", nullable = false)

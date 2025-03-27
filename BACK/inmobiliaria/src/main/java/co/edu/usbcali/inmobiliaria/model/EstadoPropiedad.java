@@ -1,8 +1,6 @@
 package co.edu.usbcali.inmobiliaria.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,15 +15,15 @@ import lombok.NoArgsConstructor;
 
 public class EstadoPropiedad {
 
-    @Column(name ="nombre", nullable = false, length = 100)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "nombre", nullable = false, length =30)
     private String nombre;
 
-    @Column(name ="descripcion", nullable = false, length = 100)
+    @Column (name = "descripcion", length =30)
     private String descripcion;
 
-    @Column(name ="idEstadoPropiedad", nullable = false, length = 100)
-    private String idEstadoPropiedad;
-
-
-    }
+    @Column (name = "id_estado_propiedad", length =30)
+    private Integer idEstadoPropiedad;
+}
 
