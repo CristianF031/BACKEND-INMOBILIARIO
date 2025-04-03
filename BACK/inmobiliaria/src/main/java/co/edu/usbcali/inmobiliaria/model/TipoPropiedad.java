@@ -12,18 +12,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "tipos_propiedad")
-public class TipoPropiedad {
 
+public class TipoPropiedad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_tipo_propiedad")
     private Integer idTipoPropiedad;
-
 
     @Column(name = "nombre" , nullable = false, length = 30)
     private String nombre;
 
     @Column(name = "descripcion", length = 50)
     private String descripcion;
-
 }

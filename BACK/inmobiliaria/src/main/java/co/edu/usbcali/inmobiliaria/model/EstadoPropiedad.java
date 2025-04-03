@@ -14,16 +14,14 @@ import lombok.NoArgsConstructor;
 @Table(name = "estados_propiedad")
 
 public class EstadoPropiedad {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "nombre", nullable = false, length =30)
-    private String nombre;
+    @Column (name = "id_estado_propiedad", nullable = false, length =30)
+    private Integer idEstadoPropiedad;
 
     @Column (name = "descripcion", length =30)
     private String descripcion;
 
-    @Column (name = "id_estado_propiedad", length =30)
-    private Integer idEstadoPropiedad;
+    @Column (name = "nombre", length =30)
+    private String nombre;
 }
-

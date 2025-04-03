@@ -20,22 +20,17 @@ public class ContratoArrendamiento {
     @Column(name = "id_contrato_arrendamiento")
     private Integer idContratoArrendamiento;
 
-    @Column(name = "Fecha_Inicio", nullable = false)
+    @Column(name = "fecha_inicio", nullable = false)
     private LocalDateTime fechaInicio;
 
-    @Column(name = "Fecha_Fin", nullable = false)
+    @Column(name = "fecha_fin", nullable = false)
     private LocalDateTime fechaFin;
 
-    @Column(name = "renta_Mensual", precision = 10, scale = 2)
+    @Column(name = "renta_mensual", precision = 10, nullable = false)
     private Double rentaMensual;
 
-    @Column(name = "deposito", precision = 10, scale = 2)
+    @Column(name = "deposito", precision = 10)
     private Double deposito;
-
-
-
-
-    //HACER LLAVES FORANEAS PARA LA PROXIMA CLASE
 
     @ManyToOne
     @JoinColumn(name = "id_estado_contrato", referencedColumnName = "id_estado_contrato", nullable = false)

@@ -45,8 +45,7 @@ public class Propiedad {
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion;
 
-    //LLAVES
-
+    //Llaves Foraneas
     @ManyToOne
     @JoinColumn(name = "id_propietario", referencedColumnName = "id_persona", nullable = false)
     private Persona propietario;
